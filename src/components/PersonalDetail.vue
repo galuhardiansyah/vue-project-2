@@ -25,15 +25,10 @@ const selectImage = () => {
   personalDetail.currentImage = file.value.files[0];
   personalDetail.previewImage = URL.createObjectURL(personalDetail.currentImage);
 }
-
-const click = () => {
-  console.log(personalDetail)
-}
 </script>
 
 <template>
   <div>
-    <button @click="click">Click</button>
     <h3 class="font-bold text-xl">Personal Details</h3>
     <div class="flex flex-row w-full justify-start mt-3">
       <Input :label="'Wanted Job Title'" :is-info="true" v-model="personalDetail.title" class="mr-10"/>
